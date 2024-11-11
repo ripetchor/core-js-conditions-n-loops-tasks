@@ -125,8 +125,72 @@ function convertToRomanNumerals(/* num */) {
  *  '10,5'    => 'one zero point five'
  *  '1950.2'  => 'one nine five zero point two'
  */
-function convertNumberToString(/* numberStr */) {
-  throw new Error('Not implemented');
+function convertNumberToString(numberStr) {
+  const map = {
+    0: 'zero',
+    1: 'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five',
+    6: 'six',
+    7: 'seven',
+    8: 'eight',
+    9: 'nine',
+    '.': 'point',
+    ',': 'point',
+    '-': 'minus',
+  };
+
+  let result = '';
+
+  for (let i = 0; i < numberStr.length; i += 1) {
+    const key = numberStr[i];
+
+    switch (key) {
+      case '0':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '1':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '2':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '3':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '4':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '5':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '6':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '7':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '8':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '9':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case '.':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      case ',':
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+      default:
+        result += i === numberStr.length - 1 ? map[key] : `${map[key]} `;
+        break;
+    }
+  }
+
+  return result;
 }
 
 /**
